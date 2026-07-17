@@ -15,7 +15,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        arrow {
+            bindings = <&mo 3>;
+            key-positions = <24 25>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -53,7 +60,7 @@
             bindings = <
 &kp Q      &kp K         &kp N         &kp D      &kp X                                                     &kp SEMI   &kp FSLH  &kp I  &kp O  &kp W
 &kp C      &kp R         &kp S         &kp T      &kp G            &none          &to 2                     &kp COMMA  &kp E     &kp A  &kp U  &kp H
-&kp Z      &kp B         &kp V         &kp P      &kp J            &lt 1 ESC      &kp INT_KATAKANAHIRAGANA  &kp DOT    &kp Y     &kp F  &kp L  &kp M
+&kp Z      &kp B         &kp V         &kp P      &kp J            &lt 1 DEL      &kp INT_KATAKANAHIRAGANA  &kp DOT    &kp Y     &kp F  &kp L  &kp M
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LSHFT  &mt LS(TAB) TAB  &kp SPACE      &kp INT4                  &lt 4 RET                          &lt 5 ESC
             >;
 
@@ -91,10 +98,10 @@
 
         MOUSE {
             bindings = <
-&trans       &trans       &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(W)                         &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans       &trans
-&lt 5 SPACE  &lt 4 SPACE  &mkp LCLK        &mkp RCLK          &mkp MCLK  &trans         &trans  &mkp MCLK  &mkp LCLK        &mkp RCLK          &lt 4 SPACE  &lt 5 SPACE
-&trans       &trans       &trans           &trans             &trans     &mkp RCLK      &trans  &trans     &mkp MB4         &mkp MB5           &trans       &trans
-&trans       &trans       &trans           &trans             &trans     &trans         &trans  &trans                                                      &trans
+&trans  &trans  &trans  &trans  &trans                      &kp LC(F)  &kp LC(X)  &kp LC(V)  &kp BSPC   &kp ENTER
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(C)  &mkp LCLK  &mkp RCLK  &mkp MB4   &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(A)  &kp SPACE  &kp TAB    &mkp MCLK  &kp LSHFT
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &mo 5
             >;
         };
 
@@ -102,7 +109,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&none   &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
