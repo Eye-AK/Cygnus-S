@@ -58,10 +58,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp K         &kp N         &kp D      &kp X                               &kp SEMI   &kp FSLH  &kp I  &kp O  &kp W
-&kp C      &kp R         &kp S         &kp T      &kp G      &to 4          &kp LBKT  &kp COMMA  &kp E     &kp A  &kp U  &kp H
-&kp Z      &kp B         &kp V         &kp P      &kp J      &lt 3 DEL      &kp RBKT  &kp DOT    &kp Y     &kp F  &kp L  &kp M
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LSHFT  &lt 1 TAB  &kp SPACE      &kp INT4  &lt 4 RET                          &lt 5 ESC
+&kp Q      &kp K         &kp N         &kp D      &kp X                               &kp SEMI   &kp FSLH  &kp I  &kp O    &kp W
+&kp C      &kp R         &kp S         &kp T      &kp G      &to 4          &kp LBKT  &kp COMMA  &kp E     &kp A  &kp U    &kp H
+&kp Z      &kp B         &kp V         &kp P      &kp J      &lt 3 DEL      &kp RBKT  &kp DOT    &kp Y     &kp F  &lt 4 L  &lt 5 M
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LSHFT  &lt 1 TAB  &kp SPACE      &kp INT4  &lt 4 RET                            &mt DEL ESC
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -69,10 +69,10 @@
 
         NUM {
             bindings = <
-&kp LEFT_BRACE  &kp RIGHT_BRACE  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS  &kp UNDER                                      &kp KP_EQUAL  &kp KP_MINUS  &kp N0  &kp N1  &kp KP_PLUS
-&kp GRAVE       &kp BSLH         &kp LEFT_BRACKET         &kp RIGHT_BRACKET         &kp APOS      &kp KP_NUM      &kp KP_MULTIPLY  &kp KP_COMMA  &kp N2        &kp N3  &kp N4  &kp N5
-&kp LS(GRAVE)   &kp LS(BSLH)     &kp LESS_THAN            &kp GREATER_THAN          &kp LS(APOS)  &kp INT_RO      &kp KP_DIVIDE    &kp KP_DOT    &kp N6        &kp N7  &kp N8  &kp N9
-&trans          &trans           &trans                   &trans                    &trans        &trans          &trans           &trans                                      &kp KP_ENTER
+&kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER                                      &kp EQUAL   &kp KP_MINUS  &kp N0  &kp N1  &kp KP_PLUS
+&kp GRAVE       &kp BSLH         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp APOS      &kp KP_NUM      &kp KP_MULTIPLY  &kp COMMA   &kp N2        &kp N3  &kp N4  &kp N5
+&kp LS(GRAVE)   &kp LS(BSLH)     &kp LESS_THAN         &kp GREATER_THAN       &kp LS(APOS)  &kp INT_RO      &kp KP_DIVIDE    &kp KP_DOT  &kp N6        &kp N7  &kp N8  &kp N9
+&trans          &trans           &trans                &trans                 &trans        &trans          &trans           &trans                                    &kp KP_ENTER
             >;
         };
 
@@ -98,10 +98,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp LC(F)  &kp LC(X)  &kp LC(V)  &kp BSPC   &kp ENTER
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(C)  &mkp LCLK  &mkp RCLK  &mkp MB4   &mkp MB5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(A)  &kp SPACE  &kp TAB    &mkp MCLK  &kp LSHFT
-&trans  &trans  &trans  &trans  &trans  &trans      &to 0   &trans                                      &mo 5
+&trans  &trans  &trans  &trans  &trans                      &kp LC(F)  &kp LC(X)  &kp LC(V)  &kp LC(Z)        &kp LC(Y)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(C)  &mkp MB4   &mkp MB5   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(A)  &mkp LCLK  &mkp RCLK  &mkp MCLK        &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
             >;
         };
 
@@ -117,7 +117,7 @@
         BT {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL
-&trans  &trans        &trans        &trans        &trans     &trans      &trans  &trans        &trans        &trans        &trans      &trans
+&trans  &trans        &trans        &trans        &trans     &trans      &trans  &trans        &trans        &trans        &trans      &studio_unlock
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt KP_N4  &trans      &trans  &kp N4        &kp N6        &kp N2        &kp N3      &kp N1
 &trans  &trans        &trans        &trans        &trans     &trans      &trans  &trans                                                &trans
             >;
